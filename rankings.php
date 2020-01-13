@@ -5,7 +5,7 @@
 <body onload="sortTable('recurve-gents');sortTable('recurve-ladies');sortTable('compound-gents');sortTable('compound-ladies');sortTable('barebow-gents');sortTable('barebow-ladies');sortTable('longbow-gents');sortTable('longbow-ladies')">
 <script src="script.js"></script>
 <?php
-require('/path/to/db.inc.php');
+require('/patch/to/db.inc.php');
 
 function rankingsTable($con, $queryFilter, $gender, $bow)
 {
@@ -15,12 +15,12 @@ function rankingsTable($con, $queryFilter, $gender, $bow)
     echo '<table border="0" cellspacing="2" cellpadding="2" id="'.$bow.'-'.$gender.'">
         <tr>
             <th class="rank"></th>
-            <th> <font face="Arial">Name</font> </th>
-            <th> <font face="Arial">Club</font> </th>
-            <th class="score"> <font face="Arial">Score 1</font> </th>
-            <th class="score"> <font face="Arial">Score 2</font> </th>
-            <th class="score"> <font face="Arial">Score 3</font> </th>
-            <th class="score"> <font face="Arial">Total</font> </th>
+            <th>Name</font> </th>
+            <th>Club</font> </th>
+            <th class="score">Score 1</th>
+            <th class="score">Score 2</th>
+            <th class="score">Score 3</th>
+            <th class="score">Total</th>
         </tr>';
     if ($output ->num_rows > 0) {
         while ($row = $output->fetch_assoc()) {

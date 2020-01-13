@@ -22,6 +22,7 @@ td, th {
 
 th {
   background-color: green;
+  font: arial;
 }
 
 tr:nth-child(odd) {
