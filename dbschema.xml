@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<pma_xml_export version="1.0" xmlns:pma="https://www.phpmyadmin.net/some_doc_url/">
+    <!--
+    - Structure schemas
+    -->
+    <pma:structure_schemas>
+        <pma:database name="rankings" collation="utf8_general_ci" charset="utf8">
+            <pma:table name="archers">
+                CREATE TABLE `archers` (
+                  `ID` int(11) NOT NULL AUTO_INCREMENT,
+                  `Name` varchar(100) NOT NULL,
+                  `Club` varchar(100) NOT NULL,
+                  `Age` varchar(10) NOT NULL,
+                  `Gender` varchar(10) NOT NULL,
+                  `Bow` varchar(10) NOT NULL,
+                  PRIMARY KEY (`ID`)
+                ) ENGINE=InnoDB AUTO_INCREMENT=220 DEFAULT CHARSET=utf8;
+            </pma:table>
+            <pma:table name="conversion">
+                CREATE TABLE `conversion` (
+                  `ID` int(11) NOT NULL AUTO_INCREMENT,
+                  `Round` varchar(100) NOT NULL,
+                  `Score` int(11) NOT NULL,
+                  `AdjustedScore` int(11) NOT NULL,
+                  PRIMARY KEY (`ID`)
+                ) ENGINE=InnoDB AUTO_INCREMENT=2245 DEFAULT CHARSET=utf8;
+            </pma:table>
+            <pma:table name="rounds">
+                CREATE TABLE `rounds` (
+                  `Round` varchar(100) NOT NULL,
+                  PRIMARY KEY (`Round`)
+                ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+            </pma:table>
+            <pma:table name="scores">
+                CREATE TABLE `scores` (
+                  `ID` int(11) NOT NULL AUTO_INCREMENT,
+                  `Archer` int(11) NOT NULL,
+                  `Type` varchar(4) NOT NULL,
+                  `Round` varchar(100) NOT NULL,
+                  `Date` date NOT NULL,
+                  `Venue` varchar(100) NOT NULL,
+                  `Score` int(11) NOT NULL,
+                  `AdjustedScore` int(11) NOT NULL,
+                  PRIMARY KEY (`ID`)
+                ) ENGINE=InnoDB AUTO_INCREMENT=1230 DEFAULT CHARSET=utf8;
+            </pma:table>
+        </pma:database>
+    </pma:structure_schemas>
+</pma_xml_export>
