@@ -1,0 +1,49 @@
+table {
+  border-collapse: collapse;
+}
+
+table, th, td {
+  border: 1px solid black;
+  text-align: left;
+}
+
+td, th {
+  width: 200px;
+}
+
+.score {
+  width: 100px;
+  text-align: center;
+}
+
+.rank {
+  width: 10px;
+}
+
+th {
+  background-color: green;
+}
+
+tr:nth-child(odd) {
+  background: #CCC
+}
+
+;
+tr:nth-child(even) {
+  background: #FFF
+}
+
+;
+table {
+  counter-reset: rowNumber;
+}
+
+table tr.count {
+  counter-increment: rowNumber;
+}
+
+table tr td:first-child::before {
+  content: counter(rowNumber);
+  min-width: 1em;
+  margin-right: 0.5em;
+}
